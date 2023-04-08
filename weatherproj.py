@@ -7,8 +7,8 @@ from PIL import Image,ImageTk
 
 def getweat(canvas):
     city=textfd.get()
-    api = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=254be576ac101209a848fbc02a7ee70a"
-    #254be576ac101209a848fbc02a7ee70a
+    api = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid={find from weatherapi }"
+    
     json_dat=requests.get(api).json()
     
     temp=int(json_dat['main']['temp']-273.15)#in k
